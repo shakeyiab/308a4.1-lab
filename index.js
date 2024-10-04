@@ -1,4 +1,4 @@
-import * as Carousel from "./Carousel.js";
+import * as Carousel from "./carousel.js";
 import axios from "axios";
 
 // The breed selection input element.
@@ -16,12 +16,18 @@ const API_KEY = "live_h3chPBdFFw7luXhD9OGiXWT9kdsA9bSNLqssYPnHnOATwpdg8CaSI2SR8l
 /**
  * 1. Create an async function "initialLoad" that does the following:
  * - Retrieve a list of breeds from the cat API using fetch().
- * - Create new <options> for each of these breeds, and append them to breedSelect.
+ * - Create new <option> for each of these breeds, and append them to breedSelect.
  *  - Each option should have a value attribute equal to the id of the breed.
  *  - Each option should display text equal to the name of the breed.
  * This function should execute immediately.
  */
+async function initialLoad() {
+    const response = await fetch("live_h3chPBdFFw7luXhD9OGiXWT9kdsA9bSNLqssYPnHnOATwpdg8CaSI2SR8lqxsVSt");
+    const catData = await response.json();
+    console.log(catData);
 
+
+}
 /**
  * 2. Create an event handler for breedSelect that does the following:
  * - Retrieve information on the selected breed from the cat API using fetch().
