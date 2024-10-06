@@ -29,7 +29,11 @@ async function initialLoad() {
 const breed = await catData.json()
 console.log(breed);
 //Create new <option> for each of these breeds, and append them to breedSelect.
-
+breed.forEach(breed => {
+    let option=document.createElement("option");
+    option.textContent= breed;
+    breedSelect.appendChild(option)    
+});
 
 }
 /**
