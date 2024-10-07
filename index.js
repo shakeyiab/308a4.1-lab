@@ -36,6 +36,7 @@ breed.forEach(breed => {
 });
 
 }
+initialLoad()
 /**
  * 2. Create an event handler for breedSelect that does the following:
  * - Retrieve information on the selected breed from the cat API using fetch().
@@ -50,6 +51,30 @@ breed.forEach(breed => {
  * - Each new selection should clear, re-populate, and restart the Carousel.
  * - Add a call to this function to the end of your initialLoad function above to create the initial carousel.
  */
+async function fetchbreed() {
+    const response = await fetch("live_h3chPBdFFw7luXhD9OGiXWT9kdsA9bSNLqssYPnHnOATwpdg8CaSI2SR8lqxsVSt");
+    const breeddata = await response.json();
+    
+    }
+
+fetchbreed();
+
+async Carousefunction(breed){
+    breed.forEach()=>{
+        const Carouselelement
+    }
+}async function getbreed() {
+    info.url,
+      info.breeds[0].name,
+      info.id
+;
+    Carousel.appendCarousel(Carousel);
+    
+}
+
+
+
+    
 
 /**
  * 3. Fork your own sandbox, creating a new one named "JavaScript Axios Lab."
